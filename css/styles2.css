@@ -1,0 +1,141 @@
+
+:root{
+    --color-primary: #2584ff;
+    --color-secondary:#00d9ff;
+    --color-accent: #ff3400;
+    --color-heading:#210e6b;
+    --color-body:#a29eb2;
+}
+/* typoghraphy*/
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    color: var(--color-body);
+    font-family: 'inter', Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    line-height: 1.5;
+
+}
+h1, h2, h3{
+    color: var(--color-heading);
+    margin-bottom: 1rem;
+}
+
+
+h1{
+    font-size: 7rem;
+    font-weight: bold;
+}
+h2{
+    font-size: 4rem;
+    
+}
+h3{
+    font-size: 3rem;
+    
+}
+p{
+    
+    margin-top: 0;
+    
+    letter-spacing: -.1rem;
+}
+@media screen and (min-width:1024px) {
+    h1{
+        font-size: 8rem;
+
+    }
+    h3{
+        font-size: 2.4rem;
+    }
+    body{
+        font-size: 1.8rem;
+    }
+}
+/*link*/
+a{
+    text-decoration: none;
+
+}
+.link{
+    color: var(--color-accent);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.link::after{
+    content: '-->';
+    margin-left: 5px;
+    transition: margin .15s;
+}
+.link:hover::after{
+    margin-left: 10px;
+}
+
+@media screen and (min-width:1024) {
+    .link{
+        font-size: 1.5rem;
+    }
+}
+/*badget*/
+.badge{
+    border-radius: 20px;
+    padding: .5rem 2rem;
+    white-space: nowrap;
+    
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+.badge--primary{
+     background-color: var(--color-secondary);
+}
+.badge--secondary{
+    background-color: var(--color-primary);
+}
+.badge--small{
+    font-size: 1.6rem;
+}
+@media screen and (min-width:1024px) {
+    .badge{
+        font-size: 1.5rem;
+    }
+    .badge--small{
+        font-size: 1.2rem;
+    }
+    
+}
+/*list*/
+
+.list{
+    color: var(--color-heading);
+    list-style-type: none;
+    padding-left:0 ;
+
+}
+
+.list--inline .list__item{
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 2rem;
+
+}
+.list--tick{
+    list-style-image: url(../images/tick.svg);
+    margin-left: 2rem;
+}
+/*grids*/
+
+.grid{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+@media screen and (min-width:768px) {
+    .grid--1x2{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
